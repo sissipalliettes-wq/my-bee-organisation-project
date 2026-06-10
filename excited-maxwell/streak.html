@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streak Freeze | Bee Organisation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="streak-page">
+      <a class="back-link" href="index.html">← Back to dashboard</a>
+
+      <section class="reward-card">
+        <div class="reward-card__copy">
+          <p class="eyebrow">Weekly hive reward</p>
+          <h1>Open the beehive to claim your streak freeze.</h1>
+          <p>
+            Once per week, the hive stores a streak freeze for you. Use it to protect your
+            honey jar streak on a day when life gets too busy.
+          </p>
+
+          <div class="reward-stats" aria-label="Streak freeze stats">
+            <div>
+              <strong id="freeze-count">0</strong>
+              <span>freezes saved</span>
+            </div>
+            <div>
+              <strong id="weekly-status">Ready</strong>
+              <span>weekly claim</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="beehive-button" id="claim-freeze" type="button" aria-live="polite">
+          <span class="beehive-button__lid"></span>
+          <span class="beehive-button__body">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="beehive-button__door"></span>
+          <span class="beehive-button__label">Open hive</span>
+        </button>
+      </section>
+
+      <section class="weekly-progress-card">
+        <div>
+          <p class="eyebrow">This week</p>
+          <h2>Your honey jars</h2>
+        </div>
+        <div class="honey-jar-row honey-jar-row--large" id="honey-jar-row" aria-label="Weekly streak progress"></div>
+      </section>
+    </main>
+
+    <script src="streak.js"></script>
+  </body>
+</html>

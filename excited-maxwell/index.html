@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bee Organisation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="home-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Bee Organisation</p>
+        <h1>Keep your hive habits buzzing every day.</h1>
+        <p>
+          Your weekly honey jar streak now sits in the bottom-right corner. Visit each day
+          to fill another jar with golden honey and keep your progress warm.
+        </p>
+      </section>
+    </main>
+
+    <a class="daily-streak-widget" href="streak.html" aria-label="Open daily streak rewards">
+      <div class="streak-widget__header">
+        <span class="streak-widget__icon" aria-hidden="true">🐝</span>
+        <span>
+          <strong>Daily streak</strong>
+          <small id="streak-count">0 / 7 jars filled</small>
+        </span>
+      </div>
+      <div class="honey-jar-row" id="honey-jar-row" aria-label="Weekly streak progress"></div>
+    </a>
+
+    <script src="streak.js"></script>
+  </body>
+</html>
