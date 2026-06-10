@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bee Task Roulette</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="task-card" aria-labelledby="task-bar-title">
+        <div class="task-heading-row">
+          <div>
+            <p class="eyebrow">Hive organiser</p>
+            <h1 id="task-bar-title">Task Bar</h1>
+          </div>
+          <button class="roulette-button" type="button" id="spin-task-button">🎡 Pick task</button>
+        </div>
+
+        <form class="task-form" id="task-form">
+          <input id="new-task" aria-label="New task" placeholder="Write another task..." />
+          <button type="submit">Add</button>
+        </form>
+
+        <ul class="task-list" id="task-list" aria-label="Tasks available for roulette"></ul>
+      </section>
+
+      <section class="bee-stage" aria-live="polite">
+        <div class="speech-bubble" id="speech-bubble" role="status" hidden>good luck !</div>
+        <div class="bee" aria-label="Happy bee mascot">
+          <div class="antenna antenna-left"></div>
+          <div class="antenna antenna-right"></div>
+          <div class="wing wing-left"></div>
+          <div class="wing wing-right"></div>
+          <div class="body">
+            <div class="stripe stripe-one"></div>
+            <div class="stripe stripe-two"></div>
+            <div class="face">
+              <span class="eye"></span>
+              <span class="eye"></span>
+              <span class="smile"></span>
+            </div>
+          </div>
+          <div class="arm arm-left" id="left-arm"></div>
+          <div class="arm arm-right" id="right-arm"></div>
+          <div class="task-plank" id="task-plank" role="note" hidden></div>
+        </div>
+      </section>
+
+      <section class="roulette-panel" id="roulette-panel" aria-label="Task roulette wheel" hidden>
+        <div class="roulette-pointer"></div>
+        <div class="roulette-wheel" id="roulette-wheel"></div>
+      </section>
+
+      <section class="workspace-panel timer-panel" aria-labelledby="timer-title">
+        <p class="eyebrow">Keep the buzz going</p>
+        <h2 id="timer-title">Timer</h2>
+        <div class="timer-display" id="timer-display" aria-live="polite">25:00</div>
+        <div class="timer-controls">
+          <button type="button" id="timer-start">Start</button>
+          <button type="button" id="timer-pause">Pause</button>
+          <button type="button" id="timer-reset">Reset</button>
+        </div>
+        <div class="timer-presets" aria-label="Timer presets">
+          <button type="button" data-minutes="5">5 min</button>
+          <button type="button" data-minutes="15">15 min</button>
+          <button type="button" data-minutes="25">25 min</button>
+        </div>
+        <p class="timer-note" id="timer-note">Finish a timer to earn 3 honey drops.</p>
+      </section>
+
+      <section class="workspace-panel shop-panel" aria-labelledby="shop-title">
+        <div class="panel-heading-row">
+          <div>
+            <p class="eyebrow">Reward corner</p>
+            <h2 id="shop-title">Shop</h2>
+          </div>
+          <strong class="honey-wallet" id="honey-wallet">🍯 12</strong>
+        </div>
+        <div class="shop-items" id="shop-items" aria-label="Honey shop items"></div>
+      </section>
+
+      <section class="workspace-panel ideas-panel" aria-labelledby="ideas-title">
+        <div class="panel-heading-row">
+          <div>
+            <p class="eyebrow">Capture sparks</p>
+            <h2 id="ideas-title">Spontaneous Idea Place</h2>
+          </div>
+          <button class="idea-spark" type="button" id="idea-spark">✨ Spark</button>
+        </div>
+        <form class="idea-form" id="idea-form">
+          <textarea id="new-idea" aria-label="New spontaneous idea" placeholder="Drop a spontaneous idea here..."></textarea>
+          <button type="submit">Save idea</button>
+        </form>
+        <ul class="idea-list" id="idea-list" aria-label="Saved spontaneous ideas"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
