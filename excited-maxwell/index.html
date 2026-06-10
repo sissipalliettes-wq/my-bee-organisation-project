@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bee Task Roulette</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="task-card" aria-labelledby="task-bar-title">
+        <div class="task-heading-row">
+          <div>
+            <p class="eyebrow">Hive organiser</p>
+            <h1 id="task-bar-title">Task Bar</h1>
+          </div>
+          <button class="roulette-button" type="button" id="spin-task-button">🎡 Pick task</button>
+        </div>
+
+        <form class="task-form" id="task-form">
+          <input id="new-task" aria-label="New task" placeholder="Write another task..." />
+          <button type="submit">Add</button>
+        </form>
+
+        <ul class="task-list" id="task-list" aria-label="Tasks available for roulette"></ul>
+      </section>
+
+      <section class="bee-stage" aria-live="polite">
+        <div class="speech-bubble" id="speech-bubble" role="status" hidden>good luck !</div>
+        <div class="bee" aria-label="Happy bee mascot">
+          <div class="antenna antenna-left"></div>
+          <div class="antenna antenna-right"></div>
+          <div class="wing wing-left"></div>
+          <div class="wing wing-right"></div>
+          <div class="body">
+            <div class="stripe stripe-one"></div>
+            <div class="stripe stripe-two"></div>
+            <div class="face">
+              <span class="eye"></span>
+              <span class="eye"></span>
+              <span class="smile"></span>
+            </div>
+          </div>
+          <div class="arm arm-left" id="left-arm"></div>
+          <div class="arm arm-right" id="right-arm"></div>
+          <div class="task-plank" id="task-plank" role="note" hidden></div>
+        </div>
+      </section>
+
+      <section class="roulette-panel" id="roulette-panel" aria-label="Task roulette wheel" hidden>
+        <div class="roulette-pointer"></div>
+        <div class="roulette-wheel" id="roulette-wheel"></div>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
