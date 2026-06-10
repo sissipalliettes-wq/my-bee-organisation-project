@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bee Organisation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Bee Organisation home">
+        <span class="brand__mark" aria-hidden="true">🐝</span>
+        <span>
+          <strong>Bee Organisation</strong>
+          <small>Plan your hive, calmly.</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#tasks">Tasks</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#notes">Notes</a>
+        <a href="streak.html">Streak freeze</a>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <section class="hero-card dashboard-hero">
+        <div>
+          <p class="eyebrow">Hive dashboard</p>
+          <h1>Keep your week organised and buzzing.</h1>
+          <p>
+            Track priorities, protect focus time, collect ideas, and keep your daily honey
+            jar streak going without losing the calm beige-and-green hive aesthetic.
+          </p>
+        </div>
+        <div class="hero-card__badge" aria-label="Current focus score">
+          <strong>84%</strong>
+          <span>focus flow</span>
+        </div>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Bee Organisation dashboard sections">
+        <article class="panel" id="tasks">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Today</p>
+              <h2>Priority comb</h2>
+            </div>
+            <span class="pill">5 tasks</span>
+          </div>
+          <ul class="task-list">
+            <li>
+              <label><input type="checkbox" checked /> Review hive goals</label>
+              <span>Done</span>
+            </li>
+            <li>
+              <label><input type="checkbox" /> Sort project nectar</label>
+              <span>25 min</span>
+            </li>
+            <li>
+              <label><input type="checkbox" /> Update garden board</label>
+              <span>15 min</span>
+            </li>
+            <li>
+              <label><input type="checkbox" /> Send queen-bee summary</label>
+              <span>Later</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="panel" id="schedule">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Schedule</p>
+              <h2>Flight plan</h2>
+            </div>
+            <span class="pill pill--green">Balanced</span>
+          </div>
+          <div class="timeline">
+            <div><time>09:00</time><span>Deep work in the honeycomb</span></div>
+            <div><time>12:30</time><span>Nectar break and reset</span></div>
+            <div><time>15:00</time><span>Team waggle check-in</span></div>
+            <div><time>17:15</time><span>Wrap-up and tomorrow prep</span></div>
+          </div>
+        </article>
+
+        <article class="panel panel--accent" id="notes">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Ideas</p>
+              <h2>Nectar notes</h2>
+            </div>
+          </div>
+          <p>
+            Keep small ideas here before they become full tasks. The best hives stay tidy by
+            collecting loose thoughts in one warm, visible place.
+          </p>
+          <div class="note-stack" aria-label="Saved notes">
+            <span>Refresh landing copy</span>
+            <span>Try a gentler reminder tone</span>
+            <span>Plan Friday review ritual</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Garden</p>
+              <h2>Project zones</h2>
+            </div>
+          </div>
+          <div class="zone-grid">
+            <span>Admin meadow</span>
+            <span>Creative clover</span>
+            <span>Learning lavender</span>
+            <span>Home hive</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <a class="daily-streak-widget" href="streak.html" aria-label="Open daily streak rewards">
+      <div class="streak-widget__header">
+        <span class="streak-widget__icon" aria-hidden="true">🍯</span>
+        <span>
+          <strong>Daily streak</strong>
+          <small id="streak-count">0 / 7 jars filled</small>
+        </span>
+      </div>
+      <div class="honey-jar-row" id="honey-jar-row" aria-label="Weekly streak progress"></div>
+    </a>
+
+    <script src="streak.js"></script>
+  </body>
+</html>
